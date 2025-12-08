@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - Travencia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <style>
+    /*about*/
+    .about-section{
+      background-image: url(https://plus.unsplash.com/premium_photo-1755874924604-b87a5a37c990?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1Mnx8fGVufDB8fHx8fA%3D%3D);
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    /*team*/
+    #team{
+      text-align: center;
+    }
+    
+    /* footer*/
+      .footer-row{
+        text-align: center;
+        background-color: orange;
+       padding: 40px 0;
+        margin: 0;
+        width: 100%;
+        margin-top: 60px;
+      }
+
+  </style>
+  <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!--Navbar-->
+    <header>
+    <nav class="navbar">
+    <div class="logo">
+        <img src="data:image/png;base64,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" alt="travenvia logo">
+        
+        <span class="logo-text">Travencia</span> 
+        </div>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="Explore.html" class="nav-link">Explore</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li> 
+            <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
+        </ul>
+
+        </nav>
+     </header>
+     
+
+     <!--Hero-->
+
+     <section class="container" id="hero">
+     <div class="hero-text">
+      <h1>About Travencia</h1>
+      <p> 
+Travencia was created with one purpose—to make travel simple, personalised, and unforgettable. We bring together carefully curated destinations, trusted local guides, and smooth travel planning so you don’t have to worry about anything except enjoying your journey.
+
+We believe every traveller deserves experiences that feel authentic. That’s why we work directly with local partners, explore real communities, and select stays and activities that capture the heart of every location. Whether you’re seeking adventure, relaxation, culture, or nature, Travencia offers trips designed for all types of travellers.
+
+Our team is passionate, experienced, and always ready to help. From the moment you book until you return home, Travencia ensures comfort, safety, and a seamless travel experience—every step of the way.</p>
+     </div>
+     </section>
+
+    </br></br>
+
+    <!--about-->
+     <section class="about-section">
+
+      <!--mission-->
+      <section class="container" id="mission">
+        <h2>Our mission</h2>
+        <p>To make travel easy, meaningful and accessible for everyone.We partner with local experts to ensure authentic jurneys that respect both people and places.</p>
+      </section>
+
+    </br></br>
+      <!--values-->
+      <section class="container" id="values">
+        <h2>Our Values</h2>
+        <ul class="muted">
+          <li>Authenticity</li>
+          <li>Responsible Travel</li>
+          <li>Transparent Pricing</li>
+          <li>Exceptional service</li>
+        </ul>
+      </section>
+
+    </br></br>
+    <!--our partners-->
+    <section class="container" id="partners">
+   <h2> Our Partners</h2>
+At Travencia, we believe great travel experiences are created through strong relationships. We partner with top airlines, certified tour operators, premium hotels, and local guides to ensure every journey meets the highest standards of safety, comfort, and authenticity.
+
+Through these trusted partnerships, we bring you exclusive deals, handpicked experiences, and smooth travel planning from start to finish.
+<ul>
+  <li>Emirates</li>
+  <li>Qatar Airways</li>
+  <li>Singapore Airline</li>
+  <li>Turkish Airline</li>
+  <li>Sri Lankan Airline</li>
+  <li>Air Asia</li>
+  <li>Fits Air</li>
+  <li>Air France</li>
+</ul>
+     </section> 
+</br></br>
+    <!--our team-->
+    <section class="container" id="team">
+      
+<div class="card border-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header">Meet our team</div>
+  <div class="card-body text-danger">
+    <h5 style="color: blue;" class="card-title">Our passionate travel experts work behind the scenes to make your jurney perfect</h5>
+    <div class="team-grid">
+        <div class="team-card">
+          <h4>Imesha</h4>
+          <p>Founder & Travel Expert</p>
+        </div>
+
+        <div class="team-card">
+          <h4>Sarah</h4>
+          <p>Customer Suport Manager</p>
+        </div>
+
+        <div class="team-card">
+          <h4>Daniel</h4>
+          <p>Destination Specialist</p>
+        </div>
+      </div>
+
+  </div>
+</div>
+       </section>
+    </section>
+
+     
+    <!--Footer-->
+<footer id = "footer">
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <div style="font-weight: 700;">Travencia</div>
+        <div class="small">Explore Life Without Limits</div>
+        <div class="small">Email: hellotravencia@gmail.com  Phone: +94 77 123 5469</div>
+        <div class="small">Address: Travencia travel Agency,</br>No.12,Ocean View Road,</br>Colombo 03,</br>Sri Lanka.</div>
+        
+      </div>
+
+    </br>
+      
+      <div>
+      <div style="font-weight: 700; margin-bottom: 6px;">Quick links</div>
+
+      <footer class="py-3 my-4"> <ul class="nav justify-content-center border-bottom pb-3 mb-3"> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Explore</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> </ul> <p class="text-center text-body-secondary">© 2025 Travencia, All rights reserved.</p> </footer>
+
+     </div>
+  </div>
+</footer>
+   </body>
+</html>
