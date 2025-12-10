@@ -387,37 +387,74 @@
     </div>
   </div>
 
-  <div class="list-group">
-    <div class="d-flex w-100 justify-content-between">
+  <!--group 1 (visible by default)-->
+  
+    <div class="testimonial">
       <h5 style="color: blue;" class="mb-1">"Travencia arranged everything - best holiday ever! From booking to transfers it was seamless." </h5>
-      <small>4 days ago</small>
-    </div>
-    <p class="mb-1">- Ayesha, Galle.</p>
+      <small class="text-body-secondary">4 days ago</small>
+      <p class="mb-1">- Ayesha, Galle.</p>
+  </div>
     
   </br>
 
-    <div class="d-flex w-100 justify-content-between">
+    <div class="testimonial">
       <h5 style="color: blue;" class="mb-1">"The Bali package exceeded expectations. Amazing guides and beautiful hotels."</h5>
       <small class="text-body-secondary">3 months ago</small>
+      <p class="mb-1">- Marlic, Colombo.</p>
     </div>
-    <p class="mb-1">- Marlic, Colombo.</p>
   
   </br>
   
-    <div class="d-flex w-100 justify-content-between">
+    <div class="testimonial">
       <h5 style="color: blue;" class="mb-1">"Cappadocia balloon ride was a lifetime momery. Great service and support."</h5>
       <small class="text-body-secondary">7 months ago</small>
-    </div>
     <p class="mb-1">- Priya, Kandy.</p>
+    </div>
     
-  </div>
+  <!--Group 2 (hidden first)-->
+  
+    <div class="testimonial">
+      <h5 style="color: blue;" class="mb-1">"Excellent service!.The team helped us plan a budget-friendly trip to Dubai."</h5>
+      <small class="text-body-secondary">10 months ago</small>
+    <p class="mb-1">- Shani, Colombo.</p>
+    </div>
 
   <div style="text-align:center ; margin-top: 12px;">
-    <button id="prevTest" class="btn btn-outline"> < prev</button>
-     <button id="nextTest" class="btn btn-outline">  Next ></button>
+    <button id="prevTest" class="btn btn-outline"> &lt; prev</button>
+     <button id="nextTest" class="btn btn-outline">  Next &gt;</button>
   </div>
 
 </section>
+    
+    <!--Java Script-->
+<script>
+const testimonials = Array.from(document.querySelectorAll('#testimonials .testimonial'));
+let currentIndex = 0;
+
+// Show 3 testimonials at a time
+function showTestimonials() {
+    testimonials.forEach((t, i) => {
+        t.style.display = (i >= currentIndex && i < currentIndex + 3) ? 'block' : 'none';
+    });
+}
+
+document.getElementById('nextTest').addEventListener('click', () => {
+    if (currentIndex + 3 < testimonials.length) {
+        currentIndex += 3;
+        showTestimonials();
+    }
+});
+
+document.getElementById('prevTest').addEventListener('click', () => {
+    if (currentIndex - 3 >= 0) {
+        currentIndex -= 3;
+        showTestimonials();
+    }
+});
+  // Show first 3 initially
+showTestimonials();
+
+</script>
 
 </br>
 
@@ -439,10 +476,27 @@
 
     <div style="display: flex; gap:10px; align-items: center;">
       <input id="email" type="email" placeholder="you@example.com" aria-label="Email address">
-      <button class="sub" id="subcribeBtn">Subscribe</button>
+      <button class="sub" id="subscribeBtn">Subscribe</button>
     </div>
   </div>
 </section>
+      <!--Java Script-->
+
+<script>
+ //Newsletter demo 
+    document.getElementById('subscribeBtn').addEventListener('click', function(){
+      const email = document.getElementById('email').value.trim();
+      if(!email || !email.includes('@')){
+        alert('Please enter a valid email address.');
+        return;
+      }
+  //this is demo action
+      this.textContent = 'Subscribed';
+      this.disabled = true;
+      alert('Thanks! We saved your email.');
+    });
+
+ </script>
 
 </br>
 <!--image-->
@@ -473,34 +527,5 @@
   </div>
 </footer>
 
-<!--Java Script-->
-<script>
-  
-  //Testimonials 
-  (function(){
-    const items= Array.from(document.querySelectorAll('#testimonials .testimonial'));
-    let idx = 0;
-    const show = (i) => {
-      items.forEach(el, n) => el.style.display = n === i ? 'block' : 'none');
-    };
-    document.getElementById('nextTest') .addEventListner('click', () => { idx = (idx+1) % items.length; show(idx); });
-    document.getElementById('prevTest') .addEventListner('click', () => { idx = (idx-1 + items.length) % items.length; show(idx); });
- 
-    //Newsletter demo 
-    document.getElementById('subcribeBtn').addEventListener('click', function(){
-      const email = document.getElementById('email').value.trim();
-      if(!email || !email.includes('@')){
-        alert('Please enter a valid email address.');
-        return;
-      }
-      //this is demo action
-      this.textContent = 'Subscribed';
-      this.disabled = true;
-      alert('Thanks! We saved your email.');
-    });
-
-</script>
-
-
-  </body>
+</body>
 </html>
